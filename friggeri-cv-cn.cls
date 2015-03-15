@@ -60,6 +60,7 @@
 
 %%% modified by Karol Kozioł for ShareLaTex use
 \RequirePackage[quiet]{fontspec}
+\RequirePackage[noindent]{ctex}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
 \newfontfamily\bodyfont
@@ -68,8 +69,7 @@ ItalicFont=texgyreheros-italic.otf,
 BoldItalicFont=texgyreheros-bolditalic.otf]
 {texgyreheros-regular.otf}
 \newfontfamily\thinfont[]{Lato-Hairline.ttf}
-\newfontfamily\headingfont[]{texgyreheros-bold.otf}
-
+\newfontfamily\headingfont[]{Hiragino Sans GB W3}
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont
 [Mapping=tex-text, Color=textcolor,
@@ -78,8 +78,8 @@ ItalicFont=texgyreheros-italic.otf,
 BoldItalicFont=texgyreheros-bolditalic.otf
 ]
 {texgyreheros-regular.otf}
-
 \setmathfont{texgyreheros-regular.otf}
+\setCJKmainfont[BoldFont={Hiragino Sans GB W6}]{Hiragino Sans GB W3}
 %%%
 
 %%%%%%%%%%
@@ -117,7 +117,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \RequirePackage{parskip}
 
 \newcounter{colorCounter}
-\def\@sectioncolor#1#2#3{%
+\def\@sectioncolor#1#2{%
   {%
     \color{%
       \ifcase\value{colorCounter}%
@@ -127,7 +127,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
         green\or%
         purple\else%
         headercolor\fi%
-    } #1#2#3%
+    } #1#2%
   }%
   \stepcounter{colorCounter}%
 }
@@ -181,7 +181,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \renewcommand{\section}[1]{
     \par\vspace{2\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
-  \begin{textblock}{3.6}(0.8, 2.4)
+  \begin{textblock}{3.6}(0.8, 2)
   \begin{flushright}
   \obeycr
 }{%
@@ -196,5 +196,5 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=5.4cm,top=2cm,right=1.5cm,bottom=1.5cm,nohead,nofoot]{geometry}
+\RequirePackage[left=5.6cm,top=2cm,right=1.5cm,bottom=1.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
