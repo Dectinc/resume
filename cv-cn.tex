@@ -1,5 +1,6 @@
 %!TEX TS-program = xelatex
 \documentclass[]{friggeri-cv-cn}
+\usepackage{fontawesome}
 
 \begin{document}
 \header{陈仕江}{}
@@ -12,9 +13,14 @@
     % 邮箱：\href{mailto:i@dectinc.cc}{i@dectinc.cc~~~~~~}
     % 主页：\href{http://dectinc.cc}{http://dectinc.cc~}
     % 电话：15210560972~~~~~
-    电话：15210560972
-    邮箱：\href{mailto:i@dectinc.cc}{i@dectinc.cc}
-    主页：\href{http://dectinc.cc}{http://dectinc.cc}
+    \faMobilePhone{~15210560972} % choose from faPhoneSign, faPhone, 
+    \faEnvelope{~\href{mailto:i@dectinc.cc}{i@dectinc.cc}} % choose from faEnvelopeAlt or faEnvelope
+    \faGlobe{~\href{http://dectinc.cc}{http://dectinc.cc}}
+    % 电话：15210560972
+    % 邮箱：\href{mailto:i@dectinc.cc}{i@dectinc.cc}
+    % 主页：\href{http://dectinc.cc}{http://dectinc.cc}
+    北京市海淀区清华大学
+    主楼东配楼11-417
   \section{链接}
     \href{http://www.linkedin.com/in/chenshijiang}{\includegraphics[width=.8em]{icons/linkedin.pdf} chenshijiang}
     \href{https://github.com/Dectinc}{\includegraphics[width=.9em]{icons/github.pdf} Dectinc}
@@ -27,7 +33,7 @@
   \section{工具}
     Mac OS, Linux
     Eclipse
-    JetBrains Series
+    JetBrains系列
     SVN, Git
   % \section{tools}
   %   Visual Studio
@@ -79,12 +85,14 @@
     {2014/10至今}
     {TrecVID MED，大规模多媒体复杂事件检测}
     {研究和比赛项目}
-    {$\bullet$ 使用多种特征及不同融合方式对视频进行描述，结合语义概念的引入及DCNN的使用改善事件检测结果。本人负责并完成事件检测研究与工具开发}
+    {$\bullet$ 使用多种特征及不同融合方式对视频进行描述，结合语义概念的引入及DCNN的使用改善事件检测结果\\
+    $\bullet$ 本人负责并完成事件检测研究与工具开发}
   \entry
     {2014/4-2015/2}
     {Tetra Fusion Engine}
     {创业项目}
-    {$\bullet$ TFE是一个互联网商情实时抓取及分析系统，本人负责其中抓取及任务管理模块，可以高效获取市场行情、网贷平台、门户资讯、微博等数据}
+    {$\bullet$ TFE是一个互联网商情实时抓取及分析系统\\
+    $\bullet$ 本人负责其中抓取模块及服务集群管理，数据源包括网贷平台、门户资讯、微博等，约10万条/日，任务分发及数据持久化使用基于netty的消息队列}
   \entry
     {2014/9-2014/11}
     {MIGDemo}
@@ -94,17 +102,17 @@
     {2014/6-2014/7}
     {TransMonitor}
     {实习项目}
-    {$\bullet$ 本人使用Python开发的对神马搜索转码效果进行监控的工具}
+    {$\bullet$ 使用Python开发的对神马搜索转码效果进行监控的工具，每日提供监控报告}
   \entry
     {2012/7-2013/6}
     {基于主题模型和深度学习的短文本分类}
     {本科毕业论文}
-    {$\bullet$ 运用基于多粒度改进的主题模型,引入深度学习方法获取隐含特征,并补充短文本中,改善其特征稀疏、信息量少等问题,提高短文本分类精度。}
-  \entry
-    {2013/12-2013/7}
-    {SocLight}
-    {合作项目}
-    {$\bullet$ 本人主要负责实现足球比赛视频关键事件，如角球、进球等的检测应用。}
+    {$\bullet$ 运用基于多粒度改进的主题模型,引入深度学习方法获取隐含特征,并补充短文本中,改善其特征稀疏、信息量少等问题,提高短文本分类精度}
+  % \entry
+  %   {2013/12-2013/7}
+  %   {SocLight}
+  %   {合作项目}
+  %   {$\bullet$ 本人主要负责实现足球比赛视频关键事件，如角球、进球等的检测应用。}
 \end{entrylist}
 
 % \section{专利}
@@ -140,7 +148,7 @@
     {2012/10-2013/3}
     {北京易思卓科技有限公司，北京}
     {实习}
-    {公司Android客户端优化及若干Android App的开发}
+    {SayHi!(千万级用户) Android客户端更新与维护及若干Android App的开发}
 \end{entrylist}
 
 \end{document}
