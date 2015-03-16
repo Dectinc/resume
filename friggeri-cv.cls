@@ -48,14 +48,14 @@
 
 % \RequirePackage[quiet]{fontspec}
 % \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
-% 
+
 % \newfontfamily\bodyfont[]{Helvetica Neue}
 % \newfontfamily\thinfont[]{Helvetica Neue UltraLight}
 % \newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
-% 
+
 % \defaultfontfeatures{Mapping=tex-text}
 % \setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light}
-% 
+
 % \setmathfont{XITS Math}
 
 %%% modified by Karol Kozioł for ShareLaTex use
@@ -67,8 +67,10 @@
 ItalicFont=texgyreheros-italic.otf,
 BoldItalicFont=texgyreheros-bolditalic.otf]
 {texgyreheros-regular.otf}
-\newfontfamily\thinfont[]{Lato-Hairline.ttf}
-\newfontfamily\headingfont[]{texgyreheros-bold.otf}
+\newfontfamily\thinfont[]{Helvetica Light}
+% \newfontfamily\thinfont[]{Lato-Hairline.ttf}
+% \newfontfamily\headingfont[]{texgyreheros-bold.otf}
+\newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
 
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont
