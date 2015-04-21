@@ -196,5 +196,5 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=5.4cm,top=2cm,right=1.5cm,bottom=1.5cm,nohead,nofoot]{geometry}
+\RequirePackage[left=5.4cm,top=2cm,right=1.5cm,bottom=0.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
