@@ -19,18 +19,6 @@
 \definecolor{linkcolour}{rgb}{0,0,0}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
-%FONTS
-\defaultfontfeatures{Mapping=tex-text}
-%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
-%%% modified for Karol Kozioł for ShareLaTeX use
-\setmainfont[
-SmallCapsFont = Fontin-SmallCaps.otf,
-BoldFont = Fontin-Bold.otf,
-ItalicFont = Fontin-Italic.otf
-]
-{Fontin.otf}
-%%%
-
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
@@ -72,14 +60,15 @@ ItalicFont = Fontin-Italic.otf
 
 %--------------------TITLE-------------
 \begin{tabular}{lr}
-\multirow{3}{24em}{\Huge ~~~~~~~~~陈仕江}
+\multirow{4}{24em}{\Huge ~~~~~~~~~陈仕江}
     % & \textsc{电话：} 
     & (+86)15210560972 \\
     % & \textsc{邮箱：} 
     & \href{mailto:chen@shijiang.info}{chen@shijiang.info} \\
+    % & \textsc{主页：} 
+    & \href{http://dectinc.cc}{http://dectinc.cc} \\
     % & \textsc{地址：} 
-    & 北京市清华大学主楼东配楼11-417 \\
-    % & \textsc{主页：} & \href{http://dectinc.cc}{http://dectinc.cc} 
+    & 北京市清华大学主楼东配楼11-417 
 \end{tabular}
 \\
 \\
@@ -201,11 +190,11 @@ ItalicFont = Fontin-Italic.otf
     {阿里巴巴无线搜索事业部}
     {算法工程师(实习)}
     {Hubble抓取系统功能及性能自动化测试}
-  % \internentry
-  %   {2012/10-2013/3}
-  %   {北京易思卓科技有限公司，北京}
-  %   {Android开发工程师(实习)}
-  %   {SayHi!(千万级用户) Android客户端更新与维护及若干Android App的开发}
+  \internentry
+    {2012/10-2013/3}
+    {易思卓科技}
+    {Android开发工程师(实习)}
+    {SayHi!(千万级用户) Android端更新与维护及若干Android App开发}
 \end{entrylist}
 
 \end{document}

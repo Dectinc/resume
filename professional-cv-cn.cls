@@ -26,13 +26,12 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 \newfontfamily\thinfont[]{SourceSansPro-Light.otf}
 \newfontfamily\headingfont[]{Hiragino Sans GB W3}
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont
-[Mapping=tex-text, Color=textcolor,
-BoldFont=texgyreheros-bold.otf,
-ItalicFont=texgyreheros-italic.otf,
-BoldItalicFont=texgyreheros-bolditalic.otf
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
 ]
-{texgyreheros-regular.otf}
+{Fontin.otf}
 \setmathfont{texgyreheros-regular.otf}
 \setCJKmainfont[BoldFont={Hiragino Sans GB W6}]{Hiragino Sans GB W3}
 %%%
