@@ -1,0 +1,211 @@
+%!TEX TS-program = xelatex
+
+\documentclass[a4paper,10pt]{professional-cv-cn}
+\usepackage{fontawesome}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+% \usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0,0}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{2pt}{2pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+\usepackage{multirow}
+
+% \setlength{\TPHorizModule}{30mm}
+% \setlength{\TPVertModule}{\TPHorizModule}
+% \textblockorigin{2mm}{0.65\paperheight}
+% \setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\begin{tabular}{lr}
+\multirow{3}{24em}{\Huge ~~~~~~~~~陈仕江}
+    % & \textsc{电话：} 
+    & (+86)15210560972 \\
+    % & \textsc{邮箱：} 
+    & \href{mailto:chen@shijiang.info}{chen@shijiang.info} \\
+    % & \textsc{地址：} 
+    & 北京市清华大学主楼东配楼11-417 \\
+    % & \textsc{主页：} & \href{http://dectinc.cc}{http://dectinc.cc} 
+\end{tabular}
+\\
+\\
+% \par{\centering
+% 		{\Huge 陈仕江 \textsc{}
+% 	}\bigskip
+% \par}
+
+% %--------------------SECTIONS-----------------------------------
+% %Section: Personal Data
+% \section{个人信息}
+
+% \begin{tabular}{rlrl}
+%     \textsc{电话：} & (+86)15210560972 &
+%     \textsc{邮箱：} & \href{mailto:chen@shijiang.info}{chen@shijiang.info} \\
+%     \textsc{~~~~~地址：} & 北京市海淀区清华大学主楼东配楼11-417 &
+%     \textsc{~~~~~主页：} & \href{http://dectinc.cc}{http://dectinc.cc} 
+% \end{tabular}
+
+%Section: Education
+\section{教育背景}
+\begin{tabular}{rl} 
+ \textsc{2013/8至今} & 清华大学，工学硕士研究生，软件工程专业 \\
+ & \small{$\bullet$ 清华大学综合优秀奖学金 ~ $\bullet$ 清华之友－乐逍遥奖学金} \\
+ \textsc{2009/8-2013/7} & 清华大学，工学学士，计算机软件专业 \\
+ & \small{$\bullet$ 清华大学学业优秀奖学金 ~ $\bullet$ 清华大学软件学院学生科协副主席} \\
+ \textsc{2010/8-2013/7} & 清华大学，经济学学士（二学位），经济学专业
+\end{tabular}
+
+\section{个人能力}
+\begin{tabular}{rl}
+ \textsc{~~~~~编程相关}& \textsc{Java}, \textsc{Python}, \textsc{Matlab}, \textsc{Shell}, \textsc{SQL}, \textsc{MongoDB}, \textsc{Redis}\\
+ \textsc{~~~~~工具使用}& \textsc{Linux}, \textsc{Latex}, \textsc{SVN}, \textsc{Git}, \textsc{Eclipse}, \textsc{JetBrains系列}\\
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{项目研究}
+% \begin{tabular}{r|p{12cm}}
+% \textsc{2015/2至今} & \textbf{基于局部特征与卷积神经网络的图像表示优化} \\
+% & \small{$\bullet$ 基于图像中局部特征及CNN学习图像特征表示。通过解特征维度相关及幂式归一化等，减轻特征学习时“丛发词”带来的负面影响} \\
+% & \small{$\bullet$ 本人主要使用Matlab、Caffe完成算法实现} \\
+% \textsc{2014/4-2015/2} & \textbf{Tetra Fusion Engine} \\
+% & \small{$\bullet$ TFE是一个互联网商情实时抓取及分析系统} \\
+% & \small{$\bullet$ 独立使用Java开发抓取框架，基于Netty实现任务分发及数据持久化模块} \\
+% \textsc{2014/9-2014/11} & \textbf{MIGDemo} \\
+% & \small{$\bullet$ 本人主要负责设计并开发的在线多媒体数据分析处理系统，可以实时完成车型检测、事件检测、人体区域检测等任务} \\
+% \textsc{2014/7} & \textbf{TransMonitor} \\
+% & \small{$\bullet$ 使用Python开发的对神马搜索转码效果进行监控的工具，每日提供相关指标监控报告} \\
+% \textsc{2012/7-2013/6} & \textbf{基于主题模型和深度学习的短文本分类} \\
+% & \small{$\bullet$ 运用基于多粒度改进的主题模型,引入深度学习方法获取隐含特征,并补充短文本中,改善其特征稀疏、信息量少等问题,提高短文本分类精度}
+% \end{tabular}
+\begin{entrylist}
+  \entry
+    {2015/2至今}
+    {基于局部特征与卷积神经网络的图像表示优化}
+    {研究项目}
+    {$\bullet$ 基于图像中局部特征及CNN学习图像特征表示。通过解特征维度相关及幂式归一化等，减轻特征学习时“丛发词”带来的负面影响 \\
+    $\bullet$ 本人主要使用Matlab完成算法实现}
+  % \entry
+  %   {2014/10-2015/3}
+  %   {TrecVID MED，大规模多媒体复杂事件检测}
+  %   {研究和比赛项目}
+  %   {$\bullet$ 使用多种特征及不同融合方式对视频进行描述，结合语义概念的引入及DCNN的使用改善事件检测结果\\
+  %   $\bullet$ 本人负责并使用Matlab、Java完成事件检测研究与工具开发}
+  % \entry
+  %   {2014/9-2014/11}
+  %   {保局部稀疏嵌入哈希方法研究(Local Sparse Embedded Hashing)}
+  %   {研究项目}
+  %   {$\bullet$ LSEH是一种融合稀疏编码与矩阵分解的保数据局部性质的哈希方法\\
+  %   $\bullet$ 本人提出及实现LSEH(Matlab版)，并在公开数据集上进行充分实验验证}
+  \entry
+    {2014/4-2015/2}
+    {Tetra Fusion Engine}
+    {创业项目}
+    {$\bullet$ TFE是一个互联网商情实时抓取及分析系统\\
+    $\bullet$ 独立使用Java开发抓取框架，基于Netty实现任务分发及数据持久化}
+  \entry
+    {2014/9-2014/11}
+    {MIGDemo}
+    {合作项目}
+    {$\bullet$ 本人主要负责设计并开发的在线多媒体数据分析处理系统，可以实时完成车型检测、事件检测、人体区域检测等任务}
+  \entry
+    {2014/7}
+    {TransMonitor}
+    {实习项目}
+    {$\bullet$ 使用Python开发的对神马搜索转码效果进行监控的工具}
+  \entry
+    {2012/7-2013/6}
+    {基于主题模型和深度学习的短文本分类}
+    {本科毕业论文}
+    {$\bullet$ 运用基于多粒度改进的主题模型，引入深度学习方法获取隐含特征，并补充到短文本中，改善其特征稀疏、信息量少等问题，提高短文本分类精度}
+  % \entry
+  %   {2013/12-2013/7}
+  %   {SocLight}
+  %   {合作项目}
+  %   {$\bullet$ 本人主要负责实现足球比赛视频关键事件，如角球、进球等的检测应用。}
+\end{entrylist}
+
+%Section: Scholarships and additional info
+\section{实习经历}
+\begin{entrylist}
+  \internentry
+    {2015/7至今}
+    {微软亚洲互联网工程院}
+    {实习生}
+    {基于大搜索结果补充的图像搜索效果优化}
+  \internentry
+    {2014/9-2015/7}
+    {清华大学}
+    {助教}
+    {数字媒体2（本科生课程）、软件测试（研究生课程）助教}
+  \internentry
+    {2014/7-2014/10}
+    {神马搜索}
+    {实习生}
+    {参与转码日常工作，负责开发转码效果监控、黑白名单及配置管理等工具}
+  \internentry
+    {2013/6-2013/9}
+    {阿里巴巴无线搜索事业部}
+    {算法工程师(实习)}
+    {Hubble抓取系统功能及性能自动化测试}
+  % \internentry
+  %   {2012/10-2013/3}
+  %   {北京易思卓科技有限公司，北京}
+  %   {Android开发工程师(实习)}
+  %   {SayHi!(千万级用户) Android客户端更新与维护及若干Android App的开发}
+\end{entrylist}
+
+\end{document}
