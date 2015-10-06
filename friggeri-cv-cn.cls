@@ -89,13 +89,13 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \RequirePackage{tikz}
 
 \newcommand{\rolefont}{%
-  \fontsize{14pt}{24pt}\selectfont%
+  \fontsize{12pt}{24pt}\selectfont%
   \thinfont%
   \color{white}%
 }
 
 \newcommand{\header}[3]{%
-  \begin{tikzpicture}[remember picture,overlay]
+  \begin{tikzpicture}[remember picture, overlay]
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=2.8cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
       \fontsize{40pt}{72pt}\color{header}%
@@ -133,18 +133,18 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 }
 
 \renewcommand{\section}[1]{
-  \par\vspace{\parskip}
+  \par\vspace{1.2\parskip}
   {%
     \LARGE\headingfont\color{headercolor}%
     \@sectioncolor #1%
   }
-  \par\vspace{\parskip}
+  %\par\vspace{.2\parskip}
 }
 
 \renewcommand{\subsection}[2]{
-  \par\vspace{.5\parskip}%
+  \par\vspace{0.5\parskip}%
   \Large\headingfont\color{headercolor} #2%
-  \par\vspace{.25\parskip}%
+  %\par\vspace{.25\parskip}%
 }
 
 \pagestyle{empty}
@@ -162,14 +162,14 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-  #1&\parbox[t]{12cm}{%
+  #1&\parbox[t]{12.5cm}{%
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-    #4\vspace{\parsep}%
+    #4\vspace{.5\parsep}%
   }\\}
 \newcommand{\entrya}[3]{%
-  #1&\parbox[t]{12cm}{%
+  #1&\parbox[t]{12.5cm}{%
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}%
@@ -187,7 +187,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \renewcommand{\section}[1]{
     \par\vspace{2\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
-  \begin{textblock}{3.6}(0.8, 2)
+  \begin{textblock}{3.8}(0.8, 2)
   \begin{flushright}
   \obeycr
 }{%
@@ -202,5 +202,5 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=5.4cm,top=2cm,right=1.5cm,bottom=0cm,nohead,nofoot]{geometry}
+\RequirePackage[left=5.2cm,top=2cm,right=1.1cm,bottom=0cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
