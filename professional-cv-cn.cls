@@ -16,7 +16,8 @@
 %%% modified by Karol Kozioł for ShareLaTex use
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[noindent]{ctex}
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+% \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+\RequirePackage{unicode-math}
 
 \newfontfamily\bodyfont
 [BoldFont=texgyreheros-bold.otf,
@@ -44,7 +45,7 @@ ItalicFont = Fontin-Italic.otf
 }
 \newcommand{\entry}[4]{%
   \textsc{#1} & \parbox[t]{11.7cm}{%
-    \textbf{#2}  % 
+    \textbf{#2}  %
     % \hfill%
     % {\footnotesize #3}
      \\%
