@@ -1,4 +1,4 @@
-\ProvidesClass{professional-cv-cn}[2012/04/30 CV class]
+\ProvidesClass{professional-cv-cn}[2017/02/05 v1.6.1 Awesome Curriculum Vitae Class]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption{print}{\def\@cv@print{}}
