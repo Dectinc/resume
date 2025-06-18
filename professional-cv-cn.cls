@@ -46,8 +46,8 @@ ItalicFont = Fontin-Italic.otf
 \newcommand{\entry}[4]{%
   \textsc{#1} & \parbox[t]{11.7cm}{%
     \textbf{#2}  %
-    % \hfill%
-    % {\footnotesize #3}
+    \hfill%
+    {\footnotesize #3}
      \\%
     #4\vspace{\parsep}%
   }\\}
