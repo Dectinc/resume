@@ -1,117 +1,141 @@
 %!TEX TS-program = xelatex
-
 \documentclass[a4paper,10pt]{professional-cv-cn}
-\usepackage{fontawesome}
 
-\usepackage{marvosym}
-\usepackage{xunicode,xltxtra,url,parskip}
-\RequirePackage{color,graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
+% ===== 宏包加载 =====
+\usepackage{fontawesome,marvosym,xunicode,xltxtra,url,parskip}
+\usepackage{color,graphicx,xcolor}
 \usepackage[big]{layaureo}
-\usepackage{supertabular}
-\usepackage{titlesec}
+\usepackage{supertabular,titlesec,hyperref,multirow,textpos}
 
-\usepackage{hyperref}
+% ===== 配置管理 =====
 \definecolor{linkcolour}{rgb}{0,0,0}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+\hypersetup{
+    colorlinks,
+    breaklinks,
+    urlcolor=linkcolour, 
+    linkcolor=linkcolour
+}
 
+% ===== 标题格式 =====
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{2pt}{2pt}
+\titlespacing{\section}{0pt}{8pt}{4pt}
 \hyphenation{im-pre-se}
 
-\usepackage[absolute]{textpos}
-\usepackage{multirow}
 \begin{document}
-
 \pagestyle{empty}
 
-\font\fb=''[cmr10]''
-
-\begin{tabular}{lr}
-\multirow{4}{24em}{\Huge ~~~~~~~~~陈仕江}
-
-    & (+86)15210560972 \\
-
-    & \href{mailto:shijiang@aliyun.com}{shijiang@aliyun.com} \\
-
-    & 浙江省杭州市余杭区未来健康科创园 B 幢 1 层
+% ===== 个人信息 =====
+\begin{tabular}{@{} l r @{}}
+    \multirow{3}{19.5em}{\Huge ~~~~~~~~~陈仕江}
+        & (+86)15210560972 \\
+        & \href{mailto:shijiang@aliyun.com}{shijiang@aliyun.com} \\
+        & 浙江省杭州市余杭区未来健康科创园 B 幢 1 层
 \end{tabular}
-\\
-\\
 
+% ===== 教育背景 =====
 \section{教育背景}
-\begin{tabular}{rl}
- \textsc{2013/08-2016/07} & 清华大学，工学硕士，软件工程专业 \\
- \textsc{2009/08-2013/07} & 清华大学，工学学士，计算机软件专业 \\
- \textsc{2010/08-2013/07} & 清华大学，经济学学士（二学位），经济学专业
+\begin{tabular}{r l}
+    \textsc{2013/08-2016/07}
+        & 清华大学，工学硕士，软件工程专业
+    \\
+    \textsc{2009/08-2013/07}
+        & 清华大学，工学学士，计算机软件专业
+    \\
+    \textsc{2010/08-2013/07}
+        & 清华大学，经济学学士（二学位），经济学专业
 \end{tabular}
 
-\section{个人能力}
-% \begin{tabular}{rl}
-%  \textsc{\textbf{研究领域}}& \textsc{活体检测}, \textsc{ 图像特征 }\\
-%  \textsc{\textbf{编程相关}}& \textsc{Java}, \textsc{Python}, \textsc{Matlab}, \textsc{Shell}\\
-%  % \textsc{~~~~~工具使用}& \textsc{Linux}, \textsc{Latex}, \textsc{Git}\\
-% \end{tabular}
-
+% ===== 核心能力 =====
+\section{核心能力}
 \begin{entrylist}
-  \internentry
-    {~~~~~~~~~~\textbf{主要成果}}
-    {}
-    {}
-    {\textsc{有图形晶圆缺陷检测设备}, \textsc{SiC 衬底和外延缺陷检测设备}, \textsc{工业视觉算法研发平台}}
-  \internentry
-    {~~~~~~~~~~\textbf{研究领域}}
-    {}
-    {}
-    {\textsc{半导体量检测装备}, \textsc{AI 缺陷检测系统}, \textsc{图像特征}}
-  \internentry
-    {~~~~~~~~~~\textbf{编程相关}}
-    {}
-    {}
-    {\textsc{Java}, \textsc{Python}, \textsc{Matlab}, \textsc{Shell}}
+    \internentry
+        {~~~~~~~~~~\textbf{技术方向}}
+        {}
+        {}
+        {
+            \textsc{半导体量检测装备研发},
+            \textsc{工业视觉算法架构},
+            \textsc{AI缺陷检测系统}
+        }
+    \internentry
+        {~~~~~~~~~~\textbf{管理专长}}
+        {}
+        {}
+        {
+            \textsc{技术团队建设},
+            \textsc{产品战略规划},
+            \textsc{装备生产及交付},
+            \textsc{科技成果转化}
+        }
 \end{entrylist}
 
+% ===== 工作经历 =====
 \section{工作经历}
 \begin{entrylist}
-  \internentry
-    {2018/06至今}
-    {北京紫睛科技有限公司}
-    {全栈工程师}
-    {主要负责软件架构设计及开发测试项目管理}
-  \internentry
-    {2016/06-2018/06}
-    {北京搜狐新媒体信息技术有限公司}
-    {研发工程师}
-    {负责低质过滤系统和个性化推荐引擎研发}
+    \entry
+        {2021/06至今}
+        {清软微视（杭州）科技有限公司}
+        {联合创始人/副总经理}
+        {
+            $\bullet$ \textbf{产品研发}：主导开发 Alpha 系列有图形晶圆检测装备与 Omega 系列 SiC 衬底/外延检测装备，技术参数在同类型应用达国际领先水平，稳定交付数十台。
+            \\
+            $\bullet$ \textbf{技术管理}：综合管理光学/机械/电气/软件/算法全栈研发团队，以及数据/生产/测试/文档/现场全流程技术支持团队，覆盖产品售前/设计/研发/生产/交付全周期。
+            \\
+            $\bullet$ \textbf{平台建设}：自主研发适用于半导体缺陷检测等工业视觉场景的算法平台，实现70\%人工复检替代，支撑半导体全制程缺陷分析。
+            \\
+            $\bullet$ \textbf{产业化落地}：实现全自主知识产权 SiC 缺陷检测装备量产交付，打破国外垄断。
+        }
+    \entry
+        {2020/11-2021/05}
+        {清华大学}
+        {科研工程师}
+        {
+            $\bullet$ 负责并组织工业视觉算法研发平台的系统设计与开发，完成某工业视觉头部上市企业交付，实现数亿元产值转化。
+        }
+    \entry
+        {2018/09-2020/10}
+        {北京紫睛科技有限公司/杭州广目科技有限公司}
+        {软件架构师}
+        {
+            $\bullet$ 主导并完成某大型政务系统核心子系统的设计与核心模块开发。
+            \\
+            $\bullet$ 主导无感测温、动态视频流人脸识别等系统级产品研发，在国家电网、高铁站等场景实现部署应用。
+        }
+    \justentry
+        {2016/08-2018/08}
+        {搜狐新媒体信息技术有限公司}
+        {研发工程师}
 \end{entrylist}
 
-\section{项目研究}
-
+% ===== 关键成果 =====
+\section{关键成果}
 \begin{entrylist}
-  \entry
-    {2022/08至今}
-    {工业视觉算法研发平台开发及测试}
-    {}
-    {$\bullet$ 负责并组织该研发平台的系统设计、开发与测试工作，并完成某工业视觉头部上市企业交付。 \\
-    $\bullet$ 解决图像识别、模型压缩优化、模型在线更新等核心技术点，支持印刷、电子屏幕等多场景AI模型研发流程，实现数亿元产值转化。}
-  \entry
-    {2018/08-2020/07}
-    {某大型政务系统核心子系统}
-    {}
-    {$\bullet$ 主导并完成了该核心子系统的设计与核心模块开发，采用 “大平台微服务” 架构，提高了系统的灵活性和业务响应速度。\\
-    $\bullet$ 沉淀了系统迁移、编码开发和开发流程规范，为后续信息化建设提供了标准化技术框架。}
-  \entry
-    {2018/06-2018/08}
-    {无感人脸识别系统及活体检测算法}
-    {}
-    {$\bullet$ 独立负责多视频源输入、支持多种不同算法检测及报警提醒的无感人脸识别系统，在 i5U、8G 内存的标准 NUC 上，实现准实时三路无感人脸识别及控制。 \\
-    $\bullet$ 独立负责研究并开发活体检测算法，活体检测准确率提升10.8\%，活体检测效率提升35\%。}
-  \entry
-    {2016/08-2018/05}
-    {搜狐新闻推荐引擎}
-    {}
-    {$\bullet$ 本人独立负责设计并主要参与研发的搜狐门户网站新闻推荐引擎，提供融合专家推荐与个性化推荐结果的实时新闻推荐。 \\
-    $\bullet$ 推荐引擎支持多算法、实验配置，ABTest 等功能；上线后各频道转化率平均提高6\%。}
+    \entry
+        {~~~~~~~~~2023-2025}
+        {Alpha~系列有图形晶圆检测装备}
+        {}
+        {
+            $\bullet$ 集成大视场高分辨多通道成像与~AI~算法，支持最大至 12 吋多种半导体晶圆检测。
+            \\
+            $\bullet$ 检测效率提升30\%，漏判率<0.01\%，达行业顶尖水平。
+        }
+    \entry
+        {~~~~~~~~~2022-2024}
+        {Omega~系列~SiC~衬底/外延检测装备}
+        {}
+        {
+            $\bullet$ 突破\textbf{多模态成像技术}（明场/暗场/PL），实现亚微米级缺陷精准检测与分类。
+            \\
+            $\bullet$ 相比国外装备，提升检测精度 3 倍，PL 信号强度 2 倍，于多家头部 SiC 企业验收。
+        }
+    \entry
+        {~~~~~~~~~2021-2023}
+        {AIRS 工业视觉算法平台}
+        {}
+        {
+            $\bullet$ 集成深度神经网络及主动学习框架，开发 AI 复判系统，替代~70\%人工复检。
+            \\
+            $\bullet$ 适配~KLA/Camtek~等主流机台，服务半导体全制程。
+        }
 \end{entrylist}
-
 \end{document}
