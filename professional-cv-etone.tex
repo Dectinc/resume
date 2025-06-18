@@ -1,0 +1,109 @@
+%!TEX TS-program = xelatex
+
+\documentclass[a4paper,10pt]{professional-cv-cn}
+\usepackage{fontawesome}
+
+\usepackage{marvosym}
+\usepackage{xunicode,xltxtra,url,parskip}
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo}
+\usepackage{supertabular}
+\usepackage{titlesec}
+
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0,0}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{2pt}{2pt}
+\hyphenation{im-pre-se}
+
+\usepackage[absolute]{textpos}
+\usepackage{multirow}
+\begin{document}
+
+\pagestyle{empty}
+
+\font\fb=''[cmr10]''
+
+\begin{tabular}{lr}
+\multirow{4}{24em}{\Huge ~~~~~~~~~陈仕江}
+
+    & (+86)15210560972 \\
+
+    & \href{mailto:etone@dectinc.cc}{etone@dectinc.cc} \\
+
+    & 北京市东城区金宝街58号华丽大厦
+\end{tabular}
+\\
+\\
+
+\section{教育背景}
+\begin{tabular}{rl}
+ \textsc{2013/08-2016/07} & 清华大学，工学硕士，软件工程专业 \\
+ \textsc{2009/08-2013/07} & 清华大学，工学学士，计算机软件专业 \\
+ \textsc{2010/08-2013/07} & 清华大学，经济学学士（二学位），经济学专业
+\end{tabular}
+
+\section{个人能力}
+\begin{tabular}{rl}
+ \textsc{\textbf{研究领域}}& \textsc{活体检测}, \textsc{ 图像特征 }\\
+ \textsc{\textbf{编程相关}}& \textsc{Java}, \textsc{Python}, \textsc{Matlab}, \textsc{Shell}, \textsc{SQL}, \textsc{Kafka}, \textsc{Redis}\\
+ % \textsc{~~~~~工具使用}& \textsc{Linux}, \textsc{Latex}, \textsc{Git}\\
+\end{tabular}
+
+\section{工作经历}
+\begin{entrylist}
+  \internentry
+    {2018/06至今}
+    {北京宜通科技有限公司}
+    {全栈工程师}
+    {负责无感人脸识别系统研发及活体检测算法研发}
+  \internentry
+    {2016/06-2018/06}
+    {北京搜狐新媒体信息技术有限公司}
+    {研发工程师}
+    {负责低质过滤系统和个性化推荐引擎研发}
+  \internentry
+    {2014/09-2015/07}
+    {清华大学}
+    {助教}
+    {数字媒体2（本科生课程）、软件测试（研究生课程）助教}
+\end{entrylist}
+
+\section{项目研究}
+
+\begin{entrylist}
+  \entry
+    {2018/08至今}
+    {活体检测算法}
+    {}
+    {$\bullet$ 独立负责研究并开发基于Inception-V1的活体检测算法，优化网络结构以在 RK3288 开发板上实现效率要求\\
+    $\bullet$ 研究数据预处理对算法最终表现的影响，活体检测准确率提升10.8\%，活体检测效率提升35\%}
+  \entry
+    {2018/06-2018/08}
+    {无感人脸识别系统}
+    {}
+    {$\bullet$ 独立负责研发读取多路摄像机视频源，检测并与底库匹配视频源中的人脸，并根据配置进行多种不同报警操作的无感人脸识别系统\\
+    $\bullet$ 在 i5U、8G 内存的标准 NUC 上，实现准实时三路无感人脸识别及控制}
+  \entry
+    {2018/03-2018/05}
+    {搜狐新闻推荐引擎}
+    {}
+    {$\bullet$ 本人独立负责设计并主要参与研发的搜狐门户网站新闻推荐引擎，提供融合专家推荐与个性化推荐结果的实时新闻推荐 \\
+    $\bullet$ 推荐引擎支持多算法、实验配置，ABTest 等功能；上线后各频道转化率平均提高6\%}
+  \entry
+    {2016/08-2017/02}
+    {搜狐新闻低质过滤系统}
+    {}
+    {$\bullet$ 独立负责低质新闻识别算法研究及低质过滤系统开发\\
+    $\bullet$ 低质过滤系统各频道平均低质判断准确率92\%，每日减少人工50\%工作量}
+  \entry
+    {2015/02-2016/02}
+    {基于局部特征与卷积神经网络的图像表示优化}
+    {}
+    {$\bullet$ 基于图像中局部特征及CNN学习图像特征表示。通过解特征维度相关及幂式归一化等，减轻特征学习时“丛发词”带来的负面影响}
+\end{entrylist}
+
+\end{document}
